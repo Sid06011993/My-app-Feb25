@@ -1,0 +1,50 @@
+<h1>Example 1 for *ngFor</h1>
+<h3>Table</h3>
+<table border="2px" cellpadding="5px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let siddhant of products">
+            <td>{{siddhant.name}}</td>
+            <td>{{siddhant.price}}</td>
+            <td>{{siddhant.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+<h3>Example 2 for *ngFor</h3>
+<ol>
+    <li *ngFor="let area of states" type="A">{{area}}</li>
+</ol>
+<h3>Example 3 for *ngFor</h3>
+<ul>
+    <li *ngFor="let area of states">{{area}}</li>
+</ul>
+<h1>Example 1 for *ngIf</h1>
+<p *ngIf="isVisible">Welcome to Mohith IT</p>
+<p *ngIf="!isVisible">Thank you for joining</p>
+
+
+<h2>{{newDate | date:'yyyy-MM-dd'}}</h2>
+<h3>Table 2</h3>
+<table border="2px" cellpadding="5px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Price</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let table of products">
+            <td>{{table.name | uppercase}}</td>
+            <td [ngStyle]="{'color':table.price<2000?'green':'red'}">{{table.price | currency}}<td>
+            <td [ngClass]="{'green':table.rating>4,'red':table.rating<2,'blue':table.rating>2&&table.rating<4}">{{table.rating}}</td>
+        </tr>
+    </tbody>
+</table>

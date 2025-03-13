@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     Error404Component,
     WelcomeComponent,
     LogoutComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

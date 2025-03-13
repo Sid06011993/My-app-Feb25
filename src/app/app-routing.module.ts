@@ -10,8 +10,10 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: LoginComponent}, //default routing
-  {path: 'dashboard', component: DashboardComponent,children:[
-    {path: 'welcome', component: WelcomeComponent},{path: 'logout', component: LogoutComponent},{path:'data-binding', component:DataBindingComponent}]},
+  {path: 'directives', component: Dire},
+  {path: 'dashboard', component: DashboardComponent,
+  children:[
+  {path: 'welcome', component: WelcomeComponent},{path: 'logout', component: LogoutComponent},{path:'data-binding', component:DataBindingComponent}]},
   {path: '**', component: Error404Component},  //wildcard routing
   
   
