@@ -10,7 +10,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: LoginComponent}, //default routing
-  {path: 'directives', component: Dire},
+  {path: 'directives', component: DirectivesComponent},
   {path: 'dashboard', component: DashboardComponent,
   children:[
   {path: 'welcome', component: WelcomeComponent},{path: 'logout', component: LogoutComponent},{path:'data-binding', component:DataBindingComponent}]},
