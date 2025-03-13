@@ -1,0 +1,14 @@
+<p>data-binding works!</p>
+
+<h2>Name:{{name}}</h2>
+	<h2>Age:{{age}}</h2>
+
+    <button [disabled]="isData">submit</button><br>
+    <input type="text" [(ngModel)]="mobile">
+
+
+    <h3>Calculator</h3>
+    <label>#1</label><input type="number" [(ngModel)]="num1"><br>
+    <label>#2</label><input type="number" [(ngModel)]="num2"><br>
+    <button (click)="add()" [disabled]="!num1 || !num2">Add</button>
+    <h3>Result is {{result}}</h3>

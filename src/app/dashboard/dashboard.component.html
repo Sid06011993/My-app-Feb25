@@ -1,0 +1,37 @@
+<div class="parent">
+    <div class="left">
+        <h1>Dashboard</h1>
+        <h3>Home</h3>
+        <h3 routerLink="welcome">Welcome</h3>
+        <h3 routerLink="/login">Logout</h3>
+        <h3 routerLink="data-binding">Data Binding</h3>
+
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<style>
+   
+    .parent
+{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0px;
+    border: 0px;
+}
+.left
+{
+    background-color: aqua;
+    width: 25%;
+    height: 100%;
+}
+.right
+{
+    background-color: rgb(5, 83, 83);
+    width: 75%;
+    height: 100%; 
+}
+</style>
