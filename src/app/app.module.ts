@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DirectivesComponent } from './directives/directives.component';
     WelcomeComponent,
     LogoutComponent,
     DataBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
