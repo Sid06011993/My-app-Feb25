@@ -9,6 +9,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateuserComponent } from './createuser/createuser.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,7 +21,10 @@ const routes: Routes = [
   {path: 'welcome', component: WelcomeComponent},{path: 'logout', component: LogoutComponent},{path:'data-binding', component:DataBindingComponent},
   {path: 'directives', component: DirectivesComponent},
   {path: 'vehicle', component: VehicleComponent},
-  {path: 'employee', component: EmployeeComponent}]},
+  {path: 'employee', component: EmployeeComponent},
+  {path: 'create-vehicle', component: CreateVehicleComponent},
+  {path: 'createuser', component: CreateuserComponent}
+]},
   {path: '**', component: Error404Component},  //wildcard routing
   
   

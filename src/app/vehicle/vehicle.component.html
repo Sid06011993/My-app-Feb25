@@ -1,3 +1,23 @@
+<br>
+<select [(ngModel)]="column">
+    <option>Vehicle</option>
+    <option>Cost</option>
+    <option>Fuel</option>
+    <option>Color</option>
+</select> 
+
+<select [(ngModel)]="order">
+    <option>Ascending</option>
+    <option>Descending</option>
+</select>
+<button (click)="sort()">Sort</button>
+
+
+<input type="text" placeholder="Type here to Search" [(ngModel)]="term" (keyup)="filter()">
+
+<button routerLink="/dashboard/create-vehicle">Create Vehicle</button>
+
+
 <table class="table table-dark">
     <thead>
         <tr>
@@ -6,6 +26,7 @@
             <th>Color</th>
             <th>Cost</th>
             <th>Fuel</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +36,24 @@
             <td>{{vehicle.color}}</td>
             <td>{{vehicle.cost}}</td>
             <td>{{vehicle.fuel}}</td>
+            <td>
+                <button (click)="delete(vehicle.id)">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
+
+
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+</select> 
+
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagination()">Pagination</button>
