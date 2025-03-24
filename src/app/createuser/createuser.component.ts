@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-createuser',
@@ -8,7 +8,7 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 })
 export class CreateuserComponent {
   public userForm:FormGroup=new FormGroup({
-    name:new FormControl(),
+    name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)]),
     email:new FormControl(),
     password:new FormControl(),
     mobile:new FormControl(),
