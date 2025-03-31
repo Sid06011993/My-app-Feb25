@@ -16,6 +16,16 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from "@angular/common/http";
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateuserComponent } from './createuser/createuser.component';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { TextareachildComponent } from './textareachild/textareachild.component';
+import { CapitalDirective } from './capital.directive';
+import { CustompipePipe } from './custompipe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +40,17 @@ import { CreateuserComponent } from './createuser/createuser.component';
     EmployeeComponent,
     VehicleComponent,
     CreateVehicleComponent,
-    CreateuserComponent
+    CreateuserComponent,
+    VehicledetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    TextareaComponent,
+    TextareachildComponent,
+    CapitalDirective,
+    CustompipePipe,
+
   ],
   imports: [
     BrowserModule,

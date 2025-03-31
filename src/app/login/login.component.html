@@ -1,1 +1,10 @@
-<h2>Login was successful!</h2>
+<br><br>
+<form [formGroup]="loginForm">
+<label>Email:</label>
+<input type="email" formControlName="email"><br>
+<label>Password:</label>
+<input type="password" formControlName="password"><br>
+
+<button (click)="login()">Login</button>
+<button routerLink="/dashboard">Click here to Login</button>
+</form>
