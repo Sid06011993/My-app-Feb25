@@ -17,9 +17,10 @@ export class VehicleService {
 //getSortedVehicles(column:any,order:any):Observable<any>{
  // return this._httpClient.get(this.baseUrl+column+"&order"+order);}
 
-
+baseUrl:string='assets/dummy.json'
   getVehicles():Observable<any>{
-    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction")
+    //return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction")
+    return this._httpClient.get(this.baseUrl);
   }
 
 getFilteredVehicles(term:any):Observable<any>{

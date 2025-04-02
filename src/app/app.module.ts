@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
@@ -25,6 +25,8 @@ import { TextareaComponent } from './textarea/textarea.component';
 import { TextareachildComponent } from './textareachild/textareachild.component';
 import { CapitalDirective } from './capital.directive';
 import { CustompipePipe } from './custompipe.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -57,9 +59,18 @@ import { CustompipePipe } from './custompipe.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
+    
+
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

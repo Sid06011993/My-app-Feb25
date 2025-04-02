@@ -6,9 +6,14 @@
     <p *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
     <p *ngIf="userForm.get('name')?.errors?.['minlength']">Minimum Length: 6</p>
     <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Maximum Length: 12</p>
+    <p *ngIf="userForm.get('name')?.errors?.['GooleMail']">Please Enter Google Mail Only</p>
+
 </div>
 <label>Email:</label>
 <input type="text" formControlName="email" appCapital><br>
+<div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+    <p *ngIf="userForm.get('email')?.errors?.['GoogleMail']">Please Enter Google Mail Only</p>
+</div>
 <label>Password:</label>
 <input type="password" formControlName="password"><br>
 <label>Phone:</label>
