@@ -19,6 +19,7 @@ import { ChildComponent } from './child/child.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -44,8 +45,8 @@ const routes: Routes = [
   {path:'aboutcompany',component:AboutCompanyComponent},
   {path:'payments',
     loadChildren: ()=> import('./payments/payments.module').then(m => m.PaymentsModule)
-  }
-  
+  },
+  {path:'lifecyclehooks', component:LifecyclehooksComponent}
 
   ]},
   {path: '**', component: Error404Component},  //wildcard routing

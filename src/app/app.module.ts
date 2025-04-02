@@ -27,6 +27,7 @@ import { CapitalDirective } from './capital.directive';
 import { CustompipePipe } from './custompipe.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 
 @NgModule({
@@ -52,6 +53,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     TextareachildComponent,
     CapitalDirective,
     CustompipePipe,
+    LifecyclehooksComponent,
+
 
   ],
   imports: [
